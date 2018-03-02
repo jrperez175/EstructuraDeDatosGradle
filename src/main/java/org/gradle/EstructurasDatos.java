@@ -3,8 +3,8 @@ package org.gradle;
 public class EstructurasDatos {
 
 	public int suma(int nro1, int nro2) {
-		
-		int resSuma= nro1+nro2;
+
+		int resSuma = nro1 + nro2;
 		return resSuma;
 	}
 
@@ -14,47 +14,115 @@ public class EstructurasDatos {
 	}
 
 	public int restaDosNumeros(int nro1, int nro2) {
-		
+
 		int resultado = nro1 - nro2;
 		return resultado;
 	}
 
 	public int multiplicarDosNumeros(int nro1, int nro2) {
-		
+
 		int resultado = nro1 * nro2;
 		return resultado;
 	}
 
 	public int dividirDosNumeros(int nro1, int nro2) {
-		
-		int resultado = nro1/nro2;
+
+		int resultado = nro1 / nro2;
 		return resultado;
 	}
 
 	public int restarUno(int nro1) {
-		
+
 		nro1--;
 		return nro1;
 	}
 
 	public String devolverString(String nombre) {
-		
+
 		return nombre;
 	}
 
 	public int contarCaracteres(String nombre) {
-		
+
 		return nombre.length();
 	}
 
 	public boolean devolverBoleano(int nro1) {
-		
-		if (nro1==5) { 
+
+		if (nro1 != 5) {
+			return false;
+		} else {
 			return true;
 		}
-		 else { 
-		return false;
-		 }
+	}
+
+	public boolean evaluarEntero(int nro1) {
+
+		if (nro1 >= 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public boolean evaluarParEImpar(int nro1) {
+
+		// if ((nro1/2)*2 == nro1) {
+		if ((nro1 % 2) == 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public int evaluarCambioAPositivo(int nro1) {
+		
+		/*if (nro1 >= 0) {
+			return nro1;
+			
+		} else {
+			return nro1*-1;
+		}*/
+		
+		return Math.abs(nro1);
+		
+	}
+
+	public boolean evaluarTablasDeVerdadSi(boolean variable_1, boolean variable_2) {
+		
+		if (variable_1 && variable_2) {
+			return true;
+		}
+		else
+			return false;
+		
+	}
+
+	public boolean evaluarTablasDeVerdadOr(boolean variable_1, boolean variable_2) {
+		
+		if (variable_1||variable_2) {
+			 return true;
+		} else {
+			return false;
+		}
+		
+	}
+
+	public boolean evaluarTablasDeVerdadNegacion(boolean variable_1) {
+		// TODO Auto-generated method stub
+		return !variable_1;
+	}
+
+	public String definirFestividad(String color_1, String color_2) {
+		
+		if (color_1=="Rojo" && color_2=="Verde") {
+			return "Navidad";
+		} else if (color_1=="Verde" && color_2=="Naranja") {
+			return "Halloween";
+		}else {
+			return "Pascua";
+		}
+		
 	}
 
 }
